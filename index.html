@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>YuriiHTML — GitHub Pages Editor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>YuriiHTML — простий HTML-редактор</h1>
+    <nav>
+      <button id="runBtn">Показати</button>
+      <button id="openBtn">Відкрити в новій вкладці</button>
+      <button id="downloadBtn">Завантажити як файл</button>
+      <select id="templates">
+        <option value="">— Шаблони —</option>
+        <option value="<h1>Привіт, світ!</h1>">Привіт, світ!</option>
+        <option
+          value='<!doctype html><html><head><meta charset="utf-8"><title>Порожня</title></head><body><h1>Порожня сторінка</h1></body></html>'>
+          Повна сторінка</option>
+        <option value='<iframe srcdoc="<h1>Iframe</h1>" style="width:100%;height:200px"></iframe>'>Iframe приклад
+        </option>
+      </select>
+    </nav>
+  </header>
+
+  <main>
+    <section class="editor">
+      <label for="code">Код (HTML/CSS/JS):</label>
+      <textarea id="code" spellcheck="false" placeholder="Введи HTML тут..."></textarea>
+      <div class="controls">
+        <label><input type="checkbox" id="live" checked> Живий перегляд</label>
+        <button id="clearBtn">Очистити</button>
+      </div>
+    </section>
+
+    <section class="preview">
+      <label>Попередній перегляд:</label>
+      <iframe id="output" sandbox="allow-scripts allow-same-origin"></iframe>
+    </section>
+  </main>
+
+  <footer>
+    <small>Збереження у <strong>localStorage</strong>. Щоб опублікувати: завантаж на GitHub і увімкни GitHub
+      Pages.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
